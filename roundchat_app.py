@@ -2,7 +2,6 @@ import streamlit as st
 from streamlit_chat import message
 from dotenv import load_dotenv
 import os
-
 from langchain.chat_models import ChatOpenAI
 # import langchain.schema
 # import langchain
@@ -31,14 +30,11 @@ def main():
         ]
     
     st.set_page_config(
-        page_title="your own chatgpt",
+        page_title="Tyxus",
         page_icon="00"
     )
 
-    st.header("Your Own ChatGPT")
-    
-    message("hjj")
-    message("wahou",is_user=True)
+    st.header("自由的GPT")
 
     with st.sidebar:
         user_input = st.text_input("your message: ",key="user_input")
