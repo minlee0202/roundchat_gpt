@@ -31,7 +31,7 @@ def main():
     
     st.set_page_config(
         page_title="Tyxus",
-        page_icon="00"
+        # page_icon="00"
     )
 
     st.header("自由的GPT")
