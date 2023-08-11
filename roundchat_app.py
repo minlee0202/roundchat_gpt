@@ -3,8 +3,6 @@ from streamlit_chat import message
 from dotenv import load_dotenv
 import os
 from langchain.chat_models import ChatOpenAI
-# import langchain.schema
-# import langchain
 from langchain.schema import(
     SystemMessage,
     HumanMessage,
@@ -21,9 +19,12 @@ def init():
 
 def main():
     
-    init()
+    # init()
     
-    chat = ChatOpenAI(temperature=0)
+    with st.sidebar:
+        user_input1 = st.text_input("your api_key: ",key="user_input1")
+    
+    chat = ChatOpenAI(temperature=0, openai_api_key=user_input1)
     if "messages" not in st.session_state:
         st.session_state.messages = [
             SystemMessage(content="you are a helpful assistant.")
